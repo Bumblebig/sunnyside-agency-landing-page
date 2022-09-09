@@ -1,0 +1,636 @@
+:root {
+  font-size: 18px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%; /* ALLOWS THE WIDTH TO FIT ON WINDOWS OR SCREEN RE-SCALING */
+  max-width: 1440px; /*THE MAXIMUM WIDTH*/
+  min-width: 375px;
+  color: hsl(213, 9%, 39%);
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  margin: 0px auto;
+  overflow-x: hidden;
+  transition: all ease-out 0.8s;
+}
+
+/******** HEADER SECTION DESIGN ********/
+
+header {
+  width: 100%;
+  height: 650px;
+  background-color: deeppink;
+  color: hsl(0, 0%, 100%);
+  font-size: 0.89rem;
+  background: rgb(98, 173, 243) url("images/desktop/image-header.jpg");
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+section.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 30px 40px 30px;
+  margin-bottom: 3.5rem;
+}
+
+nav.header ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 8px;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+
+nav.header ul li:last-child {
+  color: hsl(212, 27%, 19%);
+  text-transform: uppercase;
+  background-color: white;
+  margin-right: 0px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: all ease-out 0.3s;
+}
+
+nav.header ul li:last-child:hover {
+  background-color: rgba(255, 255, 255, 0.274);
+  backdrop-filter: blur(50px);
+  color: white;
+}
+
+img.menu {
+  display: none;
+}
+
+section.empty {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  transition: all ease-out 0.4s;
+}
+
+section.mobile-nav {
+  width: 100%;
+  min-width: 375px;
+  position: absolute;
+  z-index: 100;
+  top: 90px;
+  transition: all ease-out 0.4s;
+}
+
+nav.mobile-menu {
+  width: 85%;
+  padding: 20px 0px;
+  margin: 0px auto;
+  background-color: white;
+  color: hsl(210, 4%, 67%);
+  transition: all ease-out 0.4s;
+  clip-path: polygon(
+    31% 17%,
+    83% 17%,
+    100% 0,
+    100% 100%,
+    70% 100%,
+    30 100%,
+    0 100%,
+    0 17%
+  );
+}
+
+nav.mobile-menu li {
+  cursor: pointer;
+  list-style-type: none;
+  font-size: 1.2rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+span {
+  display: inline-block;
+  background-color: hsl(51, 100%, 49%);
+  color: hsl(212, 27%, 19%);
+  padding: 15px 35px;
+  border-radius: 50px;
+}
+
+header h1 {
+  margin: 0px auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+}
+
+p.arrow {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/****** DESCRIPTION SECTION DESIGN ******/
+
+section.description {
+  box-sizing: inherit;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  row-gap: 0px;
+  align-items: stretch;
+}
+
+h2 {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  font-size: 1.78rem;
+}
+
+section.description div img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+div.text {
+  padding: 20% 7% 10% 13%;
+  transition: all ease-out 0.5s;
+}
+
+div.text h2 {
+  color: hsl(212, 27%, 19%);
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+section.description div.text h2.band {
+  width: 58%;
+  font-size: 1.99rem;
+}
+
+div.text p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 30px;
+  width: 90%;
+}
+
+div.egg img.mobile-egg,
+div.mug img.mobile-mug {
+  display: none;
+}
+
+section.col {
+  cursor: pointer;
+  width: 130px;
+  transition: all ease-out 0.5s;
+}
+
+div.text button {
+  font-size: 0.88rem;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: hsl(212, 27%, 19%);
+  text-transform: uppercase;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  position: relative;
+  top: 8px;
+  left: 10px;
+}
+
+div.text button:active,
+div.text button:focus {
+  outline: none;
+  background-color: none;
+}
+
+div.yel {
+  width: 135px;
+  border-bottom: 8px solid hsla(51, 100%, 49%, 0.37);
+  border-radius: 5px;
+  transition: all ease-out 0.3s;
+}
+
+section.col:hover div.yel {
+  border-bottom: 8px solid hsl(51, 100%, 49%);
+}
+
+section.description div.text h2.audiences {
+  width: 85%;
+  font-size: 1.99rem;
+}
+
+div.pink {
+  width: 135px;
+  border-bottom: 8px solid hsla(7, 99%, 70%, 0.37);
+  border-radius: 5px;
+  transition: all ease-out 0.3s;
+}
+
+section.col:hover div.pink {
+  border-bottom: 8px solid hsl(7, 99%, 70%);
+}
+
+div.graphics {
+  background: rgb(136, 215, 235) url("images/desktop/image-graphic-design.jpg");
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: hsl(167, 40%, 24%);
+  text-align: center;
+  transition: all ease-out 0.3s;
+  padding: 52% 10px 10% 15px;
+}
+
+h3 {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  margin-bottom: 20px;
+  font-size: 1.348rem;
+}
+
+div.graphics p,
+div.photography p {
+  font-size: 0.88rem;
+  text-align: center;
+  width: 55%;
+  margin: 0px auto;
+  line-height: 1.5rem;
+}
+
+div.photography {
+  background: rgb(136, 215, 235) url("images/desktop/image-photography.jpg");
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: hsl(198, 62%, 26%);
+  text-align: center;
+  transition: all ease-out 0.3s;
+  padding: 52% 10px 10% 10px;
+}
+
+/**** TESTIMONIAL SECTION DESIGN *****/
+
+section.testimonial {
+  background-color: hsl(0, 0%, 100%);
+  padding: 10% 8%;
+}
+
+section.testimonial h4 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  font-size: 1.0119rem;
+  color: hsl(210, 4%, 67%);
+  margin-bottom: 70px;
+  letter-spacing: 0.2rem;
+}
+
+section.testimonies {
+  width: 90%;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+p.image {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+img.profile {
+  width: 60px;
+  border-radius: 50px;
+}
+
+p.review {
+  text-align: center;
+  font-size: 0.88rem;
+  line-height: 1.5rem;
+  margin-bottom: 50px;
+}
+
+p.name {
+  text-align: center;
+  color: hsl(212, 27%, 19%);
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+p.occupation {
+  color: hsl(210, 4%, 67%);
+  text-align: center;
+  font-size: 0.77rem;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+}
+
+/***** GALLERIES SECTION DESIGN *****/
+
+section.galleries {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+img.gallery {
+  width: 100%;
+  display: block;
+}
+
+section.mob-galleries {
+  display: none;
+}
+
+/***** FOOTER DESIGN ****/
+
+footer {
+  background-color: hsl(169, 41%, 58%);
+  padding: 5% 0px;
+}
+
+p.footer {
+  display: block;
+  margin: 0px auto 30px auto;
+  text-align: center;
+  color: hsl(167, 40%, 24%);
+  font-family: "Barlow", sans-serif;
+  font-size: 30px;
+}
+
+nav.footerNav {
+  margin: 0px auto 65px auto;
+}
+
+nav.footerNav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav.footerNav ul li {
+  font-size: 0.89rem;
+  cursor: pointer;
+  color: hsl(167, 40%, 24%);
+  transition: all ease-out 0.3s;
+  list-style-type: none;
+}
+
+nav.footerNav ul li:last-child {
+  margin-right: 0px;
+}
+
+nav.footerNav ul li:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+section.logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+div.socials {
+  width: 25px;
+}
+
+img.social {
+  cursor: pointer;
+  width: 100%;
+  filter: invert(24%) sepia(56%) saturate(367%) hue-rotate(116deg)
+    brightness(102%) contrast(94%);
+}
+
+img.social:hover {
+  filter: invert(100%) sepia(3%) saturate(0%) hue-rotate(360deg)
+    brightness(117%) contrast(100%);
+} /* THIS ALLOWS TO CHANGE THE IMG COLORS*/
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/****** RESPONSIVE DESIGNS ******/
+
+@media only screen and (max-width: 970px) {
+  /* THIS IS FOR SCREEN LESSER THAN 970PX*/
+  header {
+    height: 550px;
+  }
+
+  section.heading {
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+  }
+
+  p.arrow {
+    margin-top: 30px;
+    height: 80px;
+  }
+
+  h2.band {
+    width: 82%;
+  }
+
+  h2.audiences {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  /* THIS IS FOR SCREEN LESSER THAN 830PX. I ALSO CHANGED THE LAYOUTS HERE*/
+  header {
+    height: 480px;
+  }
+
+  p.arrow {
+    height: 55px;
+  }
+
+  nav.header ul li:last-child {
+    padding: 10px 15px;
+  }
+}
+
+/****** MOBILE RESPONSIVENESS  *****/
+
+@media only screen and (max-width: 590px) {
+  /* THIS IS FOR SCREEN LESSER THAN 590PX*/
+  /* HEADER SECTION */
+  header {
+    height: 500px;
+    background-image: url("images/mobile/image-header.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: scroll;
+  }
+
+  section.heading {
+    margin-bottom: 3.8rem;
+  }
+
+  nav.header {
+    display: none;
+  }
+
+  img.menu {
+    cursor: pointer;
+    display: block;
+    width: 35px;
+    filter: invert(100%) sepia(3%) saturate(0%) hue-rotate(360deg)
+      brightness(117%) contrast(100%);
+  }
+
+  header h1 {
+    width: 85%;
+    font-size: 2rem;
+  }
+
+  /* DESCRIPTION SECTION */
+
+  section.description {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  div.egg {
+    order: 1;
+  }
+
+  div.egg img.desktop-egg {
+    display: none;
+  }
+
+  div.egg img.mobile-egg {
+    display: block;
+  }
+
+  div.transform {
+    order: 2;
+  }
+
+  div.mug {
+    order: 3;
+  }
+
+  div.stand {
+    order: 4;
+  }
+
+  div.graphics {
+    order: 5;
+  }
+
+  div.photography {
+    order: 6;
+  }
+
+  div.text {
+    padding: 20% 20px;
+    transition: all ease-out 0.5s;
+    text-align: center;
+  }
+
+  div.text h2 {
+    width: 80%;
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 0px auto;
+    margin-bottom: 25px;
+  }
+
+  div.text button {
+    position: relative;
+    top: 8px;
+    left: 3px;
+  }
+
+  section.col {
+    margin: 0px auto;
+  }
+
+  div.mug img.desktop-mug {
+    display: none;
+  }
+
+  div.mug img.mobile-mug {
+    display: block;
+  }
+
+  div.graphics {
+    background: rgb(136, 215, 235) url("images/mobile/image-graphic-design.jpg");
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 75% 10px 10% 10px;
+  }
+
+  div.photography {
+    background: rgb(136, 215, 235) url("images/mobile/image-photography.jpg");
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: hsl(198, 62%, 26%);
+    text-align: center;
+    transition: all ease-out 0.3s;
+    padding: 75% 10px 10% 10px;
+  }
+
+  div.graphics p,
+  div.photography p {
+    width: 90%;
+  }
+
+  /* TESTIMONIAL SECTION */
+
+  section.testimonial {
+    padding: 20% 8%;
+  }
+
+  section.testimonies {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 70px;
+  }
+
+  p.review {
+    margin-bottom: 20px;
+  }
+
+  section.galleries {
+    display: none;
+  }
+
+  section.mob-galleries {
+    display: block;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    align-items: stretch;
+  }
+
+  section.mob-galleries img.mob-gallery {
+    width: 100%;
+    display: block;
+  }
+}
