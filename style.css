@@ -369,6 +369,7 @@ footer {
 
 p.footer {
   display: block;
+  cursor: default;
   margin: 0px auto 30px auto;
   text-align: center;
   color: hsl(167, 40%, 24%);
@@ -419,6 +420,7 @@ img.social {
   width: 100%;
   filter: invert(24%) sepia(56%) saturate(367%) hue-rotate(116deg)
     brightness(102%) contrast(94%);
+  transition: all 0.3s ease-out;
 }
 
 img.social:hover {
@@ -512,6 +514,13 @@ img.social:hover {
   section.description {
     display: flex;
     flex-flow: column nowrap;
+  }
+
+  div.text p {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px auto;
+    text-align: center;
   }
 
   div.egg {
